@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.navigation__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+
+.navigation__title  > a > h3 {
+	font-weight: 700;
+	letter-spacing: -1px;
+	font-size: 36px;
+	text-transform: uppercase;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.navigation__menus{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.navigation__menus > a {
+	margin: 0 20px;
+	font-weight: 400;
+	font-size: 20px;
+	display: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.navigation__action a.navigation__button {
+	padding: 14px 40px;
+	font-size: 16px;
+	border-radius: 12px;
+	font-weight: 500;
+	border: 2px solid #000;
+	display: none;
+}
+
+/* Pada minggu keempat, ditambahkan sidebar sebagai pengganti navbar
+   pada tampilan mobile
+*/
+aside {
+	position: fixed;
+	display: block;
+	top: 0;
+	padding: 24px 30px;
+	height: 100%;
+	width: 200px;
+	background-color: whitesmoke;
+	border-left: 1px solid black;
+}
+
+.sidebar-show {
+	right: 0;
+	transition: 0.5s;
+}
+
+.sidebar-hide {
+	right: -100%;
+}
+
+aside a {
+	display: block;
+	padding: 8px 16px;
+	margin-bottom: 16px;
+}
+
+.navigation__menus > a:hover {
+	color: rgb(154, 154, 154);
+}
+
+@media screen and (min-width: 1024px) {
+	#main_text{
+		font-size: 70px;
+	}
+
+	.content__information{
+		flex-direction: row;
+		gap: 40px;
+	}
+
+	.content__item__value > div{
+		padding: 4px 8px;
+	}
+
+	.content__item__value > h3{
+		font-size: 50px;
+	}
+
+	.content__item__value > p{
+		font-size: 20px;
+	}
+
+	.navigation__menus a{
+		display: block;
+	}
+
+	.navigation__action a.navigation__button{
+		display: block;
+	}
+
+	#open{
+		display: none;
+	}
+}
